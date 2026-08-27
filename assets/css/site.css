@@ -1,0 +1,67 @@
+/* Kingdom Impact Church — atmosphere: soft light, gentle curves, calm motion */
+
+.light-rays {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 55% at 15% 0%, rgba(233, 185, 73, 0.28), transparent 70%),
+    radial-gradient(45% 45% at 92% 12%, rgba(255, 255, 255, 0.18), transparent 70%);
+  mix-blend-mode: screen;
+}
+
+.curve-divider {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: #fdfaf4;
+  border-top-left-radius: 60% 100%;
+  border-top-right-radius: 60% 100%;
+}
+
+/* Gentle scroll reveals */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.no-js .reveal,
+.reveal-off .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+img {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  img,
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Focus visibility for accessible keyboard navigation */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #e9b949;
+  outline-offset: 3px;
+  border-radius: 9999px;
+}

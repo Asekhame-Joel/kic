@@ -1,0 +1,104 @@
+@import "tailwindcss" source(none);
+@source "../../../kic";
+
+@theme {
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Kingdom Impact Church brand palette — the existing royal purple, warmed and brightened */
+  --color-royal: #5b21a8;
+  --color-royal-deep: #2f0f5c;
+  --color-royal-light: #8b5cd6;
+  --color-gold: #e9b949;
+  --color-gold-light: #f6d68a;
+  --color-gold-deep: #a9761a;
+  --color-cream: #fdfaf4;
+  --color-sand: #f6efe3;
+  --color-ink: #2a2432;
+  --color-ink-soft: #5c5468;
+
+  --shadow-soft: 0 18px 45px -25px rgba(47, 15, 92, 0.35);
+  --shadow-glow: 0 20px 50px -22px rgba(91, 33, 168, 0.55);
+}
+
+@layer base {
+  body {
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+  ::selection {
+    background-color: var(--color-gold);
+    color: var(--color-royal-deep);
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-ink-soft transition hover:bg-royal/8 hover:text-royal;
+  }
+  .nav-link-active {
+    @apply bg-royal/10 text-royal-deep;
+  }
+  .mobile-link {
+    @apply border-b border-royal/8 py-3 text-base font-medium text-ink transition hover:text-royal;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-royal px-6 py-3 text-sm font-semibold text-cream shadow-glow transition duration-300 hover:-translate-y-0.5 hover:bg-royal-deep;
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-royal-deep shadow-glow transition duration-300 hover:-translate-y-0.5 hover:bg-gold-light;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-royal/30 px-6 py-3 text-sm font-semibold text-royal transition duration-300 hover:-translate-y-0.5 hover:border-royal hover:bg-royal/5;
+  }
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-cream/40 px-6 py-3 text-sm font-semibold text-cream transition duration-300 hover:-translate-y-0.5 hover:border-gold hover:text-gold;
+  }
+  .btn-ghost-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-cream/80 underline decoration-gold/60 decoration-1 underline-offset-8 transition hover:text-gold;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep;
+  }
+  .section-title {
+    @apply mt-4 font-display text-3xl font-semibold leading-tight text-royal-deep sm:text-4xl;
+  }
+  .card {
+    @apply rounded-[1.75rem] border border-royal/8 bg-cream p-7 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-gold/40;
+  }
+  .card-icon {
+    @apply inline-grid h-11 w-11 place-items-center rounded-full bg-royal/10 text-royal;
+  }
+  .identity-card {
+    @apply flex items-center gap-3 rounded-2xl border border-royal/10 bg-white/70 px-5 py-4 font-display text-lg text-royal-deep shadow-soft transition duration-300 hover:-translate-y-0.5 hover:border-gold/50;
+  }
+  .pillar {
+    @apply rounded-2xl border border-cream/20 bg-cream/10 p-6;
+  }
+  .pillar h3 {
+    @apply text-xs font-semibold uppercase tracking-[0.28em] text-gold;
+  }
+  .pillar p {
+    @apply mt-3 leading-relaxed text-cream/85;
+  }
+  .statement {
+    @apply rounded-[1.75rem] border border-royal/10 bg-sand p-8 shadow-soft;
+  }
+  .statement h3 {
+    @apply text-xs font-semibold uppercase tracking-[0.28em] text-gold-deep;
+  }
+  .statement p {
+    @apply mt-4 font-display text-xl leading-snug text-royal-deep;
+  }
+  .belief {
+    @apply flex gap-5 rounded-2xl border border-royal/8 bg-white/70 p-6 shadow-soft transition duration-300 hover:border-gold/40;
+  }
+  .belief-no {
+    @apply font-display text-lg font-semibold text-gold-deep;
+  }
+  .contact-line {
+    @apply flex items-center gap-3 rounded-2xl border border-royal/10 bg-white/70 px-5 py-4 text-lg text-royal-deep transition hover:border-gold/50 hover:text-royal;
+  }
+}
