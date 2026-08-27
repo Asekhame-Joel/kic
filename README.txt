@@ -40,3 +40,18 @@ Celebration:   Google Form (see life-at-kic.html)
 Socials:       Instagram, Facebook, TikTok, Telegram, YouTube (@thekicglobal)
 Phones:        08025019521, 08104354271, 08181948434, +234 706 458 4982
 Email:         kimpactglobal1@gmail.com
+
+Branding:
+- assets/img/kic-logo.png - official church logo (header and footer on every page)
+- favicon.png - browser tab icon derived from the logo
+
+UPDATE (v4)
+-----------
+- Contact page now lists two locations:
+  PH1 (Headquarters): Fomida Event Centre, No. 15, Odara Nwere Street, Mgbuoba, Port-Harcourt
+  PH2 (Second location): 208, Obi Wali Road, Rumuigbo, Port-Harcourt
+  Plus the campus fellowship at University of Port-Harcourt.
+- New page: gallery.html - 34 real church photos (assets/img/gallery/ + existing church photos),
+  responsive grid with a built-in lightbox (click a photo; arrow keys / Esc supported).
+  Photos are sourced from the church's own public media channels (Instagram/YouTube @thekicglobal).
+- "Gallery" added to the header, mobile menu and footer navigation on every page.

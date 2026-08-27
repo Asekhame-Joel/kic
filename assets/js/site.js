@@ -36,3 +36,50 @@
     observer.observe(el);
   });
 })();
+
+/* ---------- Gallery lightbox ---------- */
+(function () {
+  var box = document.getElementById('lightbox');
+  if (!box) return;
+  var items = Array.prototype.slice.call(document.querySelectorAll('.lb-item'));
+  if (!items.length) return;
+  var img = box.querySelector('.lb-img');
+  var cap = box.querySelector('.lb-caption');
+  var index = 0;
+  var lastFocus = null;
+
+  function show(i) {
+    index = (i + items.length) % items.length;
+    var el = items[index];
+    img.src = el.getAttribute('data-src');
+    img.alt = el.getAttribute('data-caption') || '';
+    cap.textContent = el.getAttribute('data-caption') || '';
+  }
+  function open(i) {
+    lastFocus = document.activeElement;
+    show(i);
+    box.hidden = false;
+    requestAnimationFrame(function () { box.classList.add('is-open'); });
+    document.body.style.overflow = 'hidden';
+    box.querySelector('.lb-close').focus();
+  }
+  function close() {
+    box.classList.remove('is-open');
+    document.body.style.overflow = '';
+    window.setTimeout(function () { box.hidden = true; img.src = ''; }, 200);
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  items.forEach(function (el, i) {
+    el.addEventListener('click', function () { open(i); });
+  });
+  box.querySelector('.lb-close').addEventListener('click', close);
+  box.querySelector('.lb-prev').addEventListener('click', function () { show(index - 1); });
+  box.querySelector('.lb-next').addEventListener('click', function () { show(index + 1); });
+  box.addEventListener('click', function (e) { if (e.target === box) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (box.hidden) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(index - 1);
+    else if (e.key === 'ArrowRight') show(index + 1);
+  });
+})();

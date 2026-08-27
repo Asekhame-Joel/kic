@@ -20,7 +20,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/tailwind.css" />
 <link rel="stylesheet" href="assets/css/site.css" />
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="favicon.png" type="image/png" />
+<link rel="apple-touch-icon" href="favicon.png" />
 </head>
 <body class="bg-cream font-body text-ink antialiased">
 <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-royal focus:px-5 focus:py-2 focus:text-cream">Skip to main content</a>
@@ -37,15 +38,13 @@
   </div>
   <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-6">
     <a href="index.html" class="flex items-center gap-3" aria-label="Kingdom Impact Church home">
-      <span class="grid h-11 w-11 place-items-center rounded-full bg-gradient-to-br from-royal to-royal-deep text-cream shadow-glow">
-        <span class="font-display text-lg font-semibold leading-none">K</span>
-      </span>
+      <img src="assets/img/kic-logo.png" alt="Kingdom Impact Church logo" class="h-12 w-auto drop-shadow-sm" width="48" height="61" />
       <span class="leading-tight">
         <span class="block font-display text-lg font-semibold tracking-tight text-royal-deep sm:text-xl">Kingdom Impact Church</span>
         <span class="block text-[0.65rem] uppercase tracking-[0.28em] text-gold-deep">Raising Men &middot; Influencing Spheres</span>
       </span>
     </a>
-    <nav class="hidden items-center gap-1 xl:flex" aria-label="Primary"><a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="ministries.html" class="nav-link">Ministries</a><a href="beliefs.html" class="nav-link">Our Beliefs</a><a href="life-at-kic.html" class="nav-link">Life at KIC</a><a href="salvation.html" class="nav-link">Salvation</a><a href="give.html" class="nav-link">Give</a><a href="messages.html" class="nav-link nav-link-active" aria-current="page">Messages</a><a href="contact.html" class="nav-link">Contact</a></nav>
+    <nav class="hidden items-center gap-1 xl:flex" aria-label="Primary"><a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="ministries.html" class="nav-link">Ministries</a><a href="beliefs.html" class="nav-link">Our Beliefs</a><a href="life-at-kic.html" class="nav-link">Life at KIC</a><a href="salvation.html" class="nav-link">Salvation</a><a href="give.html" class="nav-link">Give</a><a href="messages.html" class="nav-link nav-link-active" aria-current="page">Messages</a><a href="gallery.html" class="nav-link">Gallery</a><a href="contact.html" class="nav-link">Contact</a></nav>
     <div class="flex items-center gap-2">
       <a href="contact.html" class="hidden rounded-full bg-royal px-5 py-2.5 text-sm font-semibold text-cream shadow-glow transition hover:bg-royal-deep hover:-translate-y-0.5 sm:inline-flex">Join Us This Sunday</a>
       <button type="button" class="menu-toggle grid h-11 w-11 place-items-center rounded-full border border-royal/20 text-royal-deep xl:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
@@ -55,7 +54,7 @@
   </div>
   <div id="mobile-nav" class="hidden border-t border-royal/10 bg-cream xl:hidden">
     <nav class="mx-auto flex max-w-7xl flex-col px-5 py-3" aria-label="Mobile">
-      <a href="index.html" class="mobile-link">Home</a><a href="about.html" class="mobile-link">About</a><a href="ministries.html" class="mobile-link">Ministries</a><a href="beliefs.html" class="mobile-link">Our Beliefs</a><a href="life-at-kic.html" class="mobile-link">Life at KIC</a><a href="salvation.html" class="mobile-link">Salvation</a><a href="give.html" class="mobile-link">Give</a><a href="messages.html" class="mobile-link text-royal">Messages</a><a href="contact.html" class="mobile-link">Contact</a>
+      <a href="index.html" class="mobile-link">Home</a><a href="about.html" class="mobile-link">About</a><a href="ministries.html" class="mobile-link">Ministries</a><a href="beliefs.html" class="mobile-link">Our Beliefs</a><a href="life-at-kic.html" class="mobile-link">Life at KIC</a><a href="salvation.html" class="mobile-link">Salvation</a><a href="give.html" class="mobile-link">Give</a><a href="messages.html" class="mobile-link text-royal">Messages</a><a href="gallery.html" class="mobile-link">Gallery</a><a href="contact.html" class="mobile-link">Contact</a>
       <a href="contact.html" class="mt-3 rounded-full bg-royal px-5 py-3 text-center text-sm font-semibold text-cream">Join Us This Sunday</a>
       <div class="mt-3 flex flex-wrap gap-4 border-t border-royal/10 pt-3 text-sm text-ink-soft">
         <a class="hover:text-royal" href="tel:+2348025019521">Call us</a>
@@ -74,7 +73,7 @@
     <p class="reveal text-xs font-semibold uppercase tracking-[0.34em] text-gold">Messages</p>
     <h1 class="reveal mt-5 max-w-3xl font-display text-4xl font-semibold leading-[1.08] text-cream sm:text-5xl lg:text-6xl">Feed on the Word</h1>
     <p class="reveal mt-6 max-w-2xl text-lg leading-relaxed text-cream/85">Explore our teachings and grow in your walk with God. Messages from Kingdom Impact Church are available to listen to any time.</p>
-    <div class="mt-8 flex flex-wrap gap-3"><a href="https://chigwekingsechem.my.canva.site/kic-messages" class="btn-gold" target="_blank" rel="noopener">Listen To Messages</a><a href="contact.html" class="btn-outline-light">Join Us This Sunday</a></div>
+    <div class="mt-8 flex flex-wrap gap-3"><a href="messages-library.html" class="btn-gold">Listen To Messages</a><a href="contact.html" class="btn-outline-light">Join Us This Sunday</a></div>
   </div>
   <div class="curve-divider"></div>
 </section>
@@ -93,7 +92,7 @@
         <div>
           <h2 class="font-display text-3xl font-semibold">KIC Messages Library</h2>
           <p class="mt-3 leading-relaxed text-cream/85">Our full message collection is hosted on the KIC Messages page. Listen, download and share the Word preached at Kingdom Impact Church.</p>
-          <a href="https://chigwekingsechem.my.canva.site/kic-messages" target="_blank" rel="noopener" class="btn-gold mt-6">Open The Messages Library</a>
+          <a href="messages-library.html" class="btn-gold mt-6">Open The Messages Library</a>
         </div>
       </div>
     </div>
@@ -116,13 +115,16 @@
 <footer class="mt-24 bg-royal-deep text-cream/80">
   <div class="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-2 lg:grid-cols-4">
     <div>
-      <p class="font-display text-2xl font-semibold text-cream">Kingdom Impact Church</p>
+      <div class="flex items-center gap-3">
+        <img src="assets/img/kic-logo.png" alt="Kingdom Impact Church logo" class="h-14 w-auto" width="56" height="71" />
+        <p class="font-display text-2xl font-semibold text-cream">Kingdom Impact Church</p>
+      </div>
       <p class="mt-4 max-w-xs text-sm leading-relaxed">Raising generations of men and women, by the Word and the Spirit, for Kingdom impact in every sphere.</p>
       <p class="mt-5 font-display text-lg italic text-gold">Welcome home.</p>
     </div>
     <div>
       <h2 class="text-xs font-semibold uppercase tracking-[0.28em] text-gold">Explore</h2>
-      <ul class="mt-5 grid grid-cols-2 gap-y-2 text-sm md:grid-cols-1"><li><a class="transition hover:text-gold" href="index.html">Home</a></li><li><a class="transition hover:text-gold" href="about.html">About</a></li><li><a class="transition hover:text-gold" href="ministries.html">Ministries</a></li><li><a class="transition hover:text-gold" href="beliefs.html">Our Beliefs</a></li><li><a class="transition hover:text-gold" href="life-at-kic.html">Life at KIC</a></li><li><a class="transition hover:text-gold" href="salvation.html">Salvation</a></li><li><a class="transition hover:text-gold" href="give.html">Give</a></li><li><a class="transition hover:text-gold" href="messages.html">Messages</a></li><li><a class="transition hover:text-gold" href="contact.html">Contact</a></li></ul>
+      <ul class="mt-5 grid grid-cols-2 gap-y-2 text-sm md:grid-cols-1"><li><a class="transition hover:text-gold" href="index.html">Home</a></li><li><a class="transition hover:text-gold" href="about.html">About</a></li><li><a class="transition hover:text-gold" href="ministries.html">Ministries</a></li><li><a class="transition hover:text-gold" href="beliefs.html">Our Beliefs</a></li><li><a class="transition hover:text-gold" href="life-at-kic.html">Life at KIC</a></li><li><a class="transition hover:text-gold" href="salvation.html">Salvation</a></li><li><a class="transition hover:text-gold" href="give.html">Give</a></li><li><a class="transition hover:text-gold" href="messages.html">Messages</a></li><li><a class="transition hover:text-gold" href="gallery.html">Gallery</a></li><li><a class="transition hover:text-gold" href="contact.html">Contact</a></li></ul>
     </div>
     <div>
       <h2 class="text-xs font-semibold uppercase tracking-[0.28em] text-gold">Visit &amp; Contact</h2>
