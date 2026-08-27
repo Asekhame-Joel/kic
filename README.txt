@@ -30,7 +30,7 @@ npx @tailwindcss/cli@4 -i assets/css/src.css -o assets/css/tailwind.css --minify
 
 Preserved external destinations
 -------------------------------
-Messages:      https://chigwekingsechem.my.canva.site/kic-messages
+Messages:      messages-library.html
 Partner form:  https://bit.ly/KICPARTNERS
 Paystack:      https://paystack.shop/pay/kicpartnership
                https://paystack.shop/pay/kic-freewilloffering

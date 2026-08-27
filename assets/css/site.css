@@ -45,6 +45,17 @@ img {
   transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+@media (min-width: 768px) {
+  header a[aria-label="Kingdom Impact Church home"] {
+    gap: 1rem;
+    margin-right: 2rem;
+  }
+
+  header a[aria-label="Kingdom Impact Church home"] > span > span {
+    white-space: nowrap;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   img,
